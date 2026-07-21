@@ -20,12 +20,11 @@ jobs:
         with:
           bom-type: sbom
           path: "."
-          accuknox_endpoint: "cspm.demo.accuknox.com"
-          accuknox_token: ${{ secrets.ACCUKNOX_TOKEN }}
-          accuknox_label: "zorisbom"
+          endpoint: "cspm.demo.accuknox.com"
+          token: ${{ secrets.ACCUKNOX_TOKEN }}
+          label: "zorisbom"
           project-name: zori_sbom
           project-classifier: application
-          soft_fail: "true"
 
       - name: Download Workflow Artifacts
         uses: actions/download-artifact@v4
