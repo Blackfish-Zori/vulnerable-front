@@ -24,7 +24,7 @@ jobs:
           accuknox_token: ${{ secrets.ACCUKNOX_TOKEN }}
           accuknox_label: "zorisbom"
           project-name: zori_sbom
-          porject-classifier: application
+          project-classifier: application
           soft_fail: "true"
 
       - name: Download Workflow Artifacts
@@ -35,4 +35,4 @@ jobs:
       - name: Upload SBOM to GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          files: artifacts/**/*.jsom
+          files: artifacts/**/*.json
